@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Video Sample</title>
+
+	<meta http-equiv="content-type" content="text/html" charset="utf-8">
+
+
+</head>
+
+<body>
+
+	<script>
+		function onVidyoClientLoaded(status){
+
+			console.log("VidyoClient load state -" + status.state);
+
+			if (status.state == "READY"){
+				VC.CreateVidyoConnector({
+					  viewId: "renderer",                            // Div ID where the composited video will be rendered, see VidyoConnector.html
+					  viewStyle: "VIDYO_CONNECTORVIEWSTYLE_Default", // Visual style of the composited renderer
+					  remoteParticipants: 16,                        // Maximum number of participants
+					  logFileFilter: "error",
+					  logFileName:"",
+					  userData:""
+				}).then(function(vc) {
+					console.log("create success");
+				   
+				}).catch(function() {
+				  console.error("CreateVidyoConnector Failed");
+				});
+
+			}
+
+		}
+
+
+
+	</script>
+<script src="https://static.vidyo.io/latest/javascript/VidyoClient/VidyoClient.js?onload=onVidyoClientLoaded"></script>
+	<h3>Hello video</h3>
+
+
+
+</body>
+
+</html>

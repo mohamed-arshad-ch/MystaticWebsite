@@ -1,0 +1,27 @@
+.inp-log{
+    text-decoration: none;
+}
+.inp-log {
+    width: 350px;
+    border: 1px solid;
+   
+}
+.login-container{
+
+    margin-top: 110px;
+
+}
+#topBtn{
+   
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    background:#7b1798 ;
+    color: white;
+    border: none;
+    cursor: pointer;
+   
+   
+}
